@@ -4,10 +4,10 @@ import IFrame from "../IFrame/IFrame";
 import Video from "../Video/Video";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faChevronCircleDown,
-  faChevronCircleRight,
-  faChevronCircleLeft,
-  faChevronCircleUp,
+  faChevronDown,
+  faChevronRight,
+  faChevronLeft,
+  faChevronUp,
 } from "@fortawesome/free-solid-svg-icons";
 import videocss from "./VideoPlayer.module.css";
 const VideoPlayer = () => {
@@ -54,22 +54,30 @@ const VideoPlayer = () => {
                       onClick={() => setloop(index - 1)}
                       className={`${videocss.btnClassTop}`}
                     >
-                      <FontAwesomeIcon icon={faChevronCircleUp} />
+                      <FontAwesomeIcon
+                        icon={faChevronUp}
+                        color="white"
+                        size="3x"
+                      />
                     </span>
                   )}
 
                   <span
                     onClick={() => setloop(index + 1)}
-                    className={`${videocss.btnClass} ${videocss.btnClassRight}`}
+                    className={`${videocss.btnClassDown}`}
                   >
-                    <FontAwesomeIcon icon={faChevronCircleDown} />
+                    <FontAwesomeIcon
+                      icon={faChevronDown}
+                      color="white"
+                      size="3x"
+                    />
                   </span>
 
                   <span
                     onClick={() => setshowname(true)}
                     className={videocss.sidebtnRight}
                   >
-                    <FontAwesomeIcon icon={faChevronCircleRight} />
+                    <FontAwesomeIcon icon={faChevronRight} size="3x" />
                   </span>
                 </>
               ) : vd.channel && vd.channel.user.name ? (
@@ -79,7 +87,7 @@ const VideoPlayer = () => {
                     onClick={() => setshowname(false)}
                     className={videocss.sidebtnLeft}
                   >
-                    <FontAwesomeIcon icon={faChevronCircleLeft} />
+                    <FontAwesomeIcon icon={faChevronLeft} size="2x" />
                   </span>
                   <p className={videocss.name}> {vd.channel.user.name}</p>
                 </h2>
@@ -90,7 +98,7 @@ const VideoPlayer = () => {
                     onClick={() => setshowname(false)}
                     className={videocss.sidebtnLeft}
                   >
-                    <FontAwesomeIcon icon={faChevronCircleLeft} />
+                    <FontAwesomeIcon icon={faChevronLeft} size="3x" />
                   </span>
                   <p className={videocss.name}> Unknown Name</p>
                 </h2>

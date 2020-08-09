@@ -14,7 +14,7 @@
   position: absolute;
 } */
 
-.btnClassRight {
+.btnClassDown {
   margin: 0;
   position: absolute !important;
   bottom: 0%;
@@ -46,6 +46,7 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   cursor: pointer;
+  background-color: "red";
 }
 
 .sidebtnLeft {
@@ -63,6 +64,7 @@
 .name {
   margin: 0;
   position: absolute !important;
-  left: 50%;
+  left: 35%;
   top: 40%;
+  font-size: 60px;
 }
