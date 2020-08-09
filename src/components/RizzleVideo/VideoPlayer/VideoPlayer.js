@@ -52,7 +52,7 @@ const VideoPlayer = () => {
                   {(loop !== 0 || loop === videodata.length) && (
                     <span
                       onClick={() => setloop(index - 1)}
-                      className={`${videocss.btnClassTop}`}
+                      className={`${videocss.iconClass} ${videocss.btnClassTop}`}
                     >
                       <FontAwesomeIcon
                         icon={faChevronUp}
@@ -64,7 +64,7 @@ const VideoPlayer = () => {
 
                   <span
                     onClick={() => setloop(index + 1)}
-                    className={`${videocss.btnClassDown}`}
+                    className={`${videocss.iconClass} ${videocss.btnClassDown}`}
                   >
                     <FontAwesomeIcon
                       icon={faChevronDown}
@@ -75,7 +75,7 @@ const VideoPlayer = () => {
 
                   <span
                     onClick={() => setshowname(true)}
-                    className={videocss.sidebtnRight}
+                    className={`${videocss.iconClass} ${videocss.sidebtnRight}`}
                   >
                     <FontAwesomeIcon icon={faChevronRight} size="3x" />
                   </span>
@@ -85,7 +85,7 @@ const VideoPlayer = () => {
                   {" "}
                   <span
                     onClick={() => setshowname(false)}
-                    className={videocss.sidebtnLeft}
+                    className={`${videocss.iconClass} ${videocss.sidebtnLeft}`}
                   >
                     <FontAwesomeIcon icon={faChevronLeft} size="2x" />
                   </span>
@@ -96,7 +96,7 @@ const VideoPlayer = () => {
                   {" "}
                   <span
                     onClick={() => setshowname(false)}
-                    className={videocss.sidebtnLeft}
+                    className={`${videocss.iconClass} ${videocss.sidebtnLeft}`}
                   >
                     <FontAwesomeIcon icon={faChevronLeft} size="3x" />
                   </span>
