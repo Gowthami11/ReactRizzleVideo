@@ -1,0 +1,14 @@
+/* video.loading {
+  background: black url(../../images/loader.gif) center center no-repeat;
+} */
+
+.video {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  object-fit: contain;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
