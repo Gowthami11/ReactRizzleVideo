@@ -15,16 +15,16 @@ const VideoPlayer = () => {
   const [loop, setloop] = useState(0);
   const [showname, setshowname] = useState(false);
   useEffect(() => {
-    console.log(videodata1);
+    //  console.log(videodata1);
     setvideodata(videodata1);
   }, []);
   let i;
-  console.log(videodata1);
+  //console.log(videodata1);
 
   return (
     <div>
       {videodata.map((vd, index) => {
-        console.log(vd, index, loop);
+        //console.log(vd, index, loop);
         return (
           <div key={Math.random()}>
             {loop === index &&
@@ -61,17 +61,18 @@ const VideoPlayer = () => {
                       />
                     </span>
                   )}
-
-                  <span
-                    onClick={() => setloop(index + 1)}
-                    className={`${videocss.iconClass} ${videocss.btnClassDown}`}
-                  >
-                    <FontAwesomeIcon
-                      icon={faChevronDown}
-                      color="white"
-                      size="3x"
-                    />
-                  </span>
+                  {loop != videodata.length - 1 && (
+                    <span
+                      onClick={() => setloop(index + 1)}
+                      className={`${videocss.iconClass} ${videocss.btnClassDown}`}
+                    >
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        color="white"
+                        size="3x"
+                      />
+                    </span>
+                  )}
 
                   <span
                     onClick={() => setshowname(true)}
